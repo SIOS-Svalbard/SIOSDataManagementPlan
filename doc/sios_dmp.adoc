@@ -269,7 +269,6 @@ SIOS Data Management System Working Group are listed.
 |=======================================================================
 |Name |Country |URL | Responsible | Comment
 
-
 |Arctic Data Archive System |JP |https://ads.nipr.ac.jp/ |Hironori
 Yabuki |Metadata interoperability
 interfaces are available. Regularly harvested.
@@ -278,7 +277,7 @@ interfaces are available. Regularly harvested.
 |Metadata interoperability interfaces are available. Data are served according to the Interoperability Guidelines. This subsystem is connected to the WMO Information System.  Regularly harvested. 
 |AWI/PANGAEA |DE |http://pangaea.de/ |NA |Metadata interoperability interfaces are available. This subsystem is a member of ICSU World Data System. Regularly harvested.
 
-|IGPAS |PL | |Bartek Bartosz |Metadata are harvested from datasets which are exposed according to the Interoperability Guidelines. 
+|IGPAS |PL | |Jakub Przewalski |Metadata are harvested from datasets which are exposed according to the Interoperability Guidelines. 
 
 |IOPAN |PL |https://geo1.iopan.pl |Marcin Wichorowski |Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
 
@@ -297,7 +296,7 @@ infrastructure in Norway. Regularly harvested.
 
 |Nansen Environmental and Remote Sensing Center |NO |http://metadata.nersc.no/ |Torill Hamre |Metadata interoperability interfaces are available. Regularly harvested.
 
-|University of Silecia |PL |http://ppdb.us.edu.pl/ |Łukasz Malarzweski |Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
+|University of Silesia |PL |http://ppdb.us.edu.pl/ |Łukasz Malarzweski |Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
 |=======================================================================
 
 In the current situation SIOS has no overview of the costs of long term
@@ -307,6 +306,8 @@ would be preserved anyway.
 
 Concerning the value of data preservation, observations are priceless
 for understanding our environment.
+
+Development of the SDMS and handling of data within this is managed by the SDMS Working Group (WG) which reports to the SIOS Board of Directors and eventually the General Assembly. The SDMS WG has about 20 membersfootnote:[The number of members fluctuates.]
 
 == Data security
 
