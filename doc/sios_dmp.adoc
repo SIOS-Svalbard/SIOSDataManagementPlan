@@ -1,7 +1,6 @@
-:doctype: book
+:doctype: article
 :pdf-folio-placement: physical
-:title-logo-image: image::Pictures/100002010000064000000416954AF1BF569C4DD3.png[pdfwidth=15cm,align=right]
-= Data Management Plan
+//:title-logo-image: image::Pictures/100002010000064000000416954AF1BF569C4DD3.png[pdfwidth=15cm,align=right]
 :sectanchors:
 :toc: macro
 :toclevels: 4
@@ -9,6 +8,11 @@
 :sectnumlevels: 6
 :chapter-label:
 :xrefstyle: short
+:title-page:
+= Data Management Plan
+:title-page-background-image: image::Pictures/sios-fc.png[]
+
+<<<
 
 [discrete]
 
@@ -30,7 +34,11 @@ This work is released under the Creative Commons Attribution 4.0 License. To vie
 
 image::Pictures/ccby.png[]
 
+<<<
+
 toc::[]
+
+<<<
 
 == Admin details
 
