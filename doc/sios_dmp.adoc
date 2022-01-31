@@ -22,7 +22,7 @@
 |==================================================================
 |Version |Date |Comment |Responsible
 
-|0.5 |2022-01-10 |Updated data centres contributing (not finished yet) and some minor editing. |Øystein Godøy
+|0.5 |2022-01-31 |Updated data centres contributing, references to SDMS WG and governance structure as well as general editing. |Øystein Godøy
 |0.4 |2020-06-17 |Transferred into ASCIIDOC and updated contributing data centres.|Øystein Godøy
 |0.3 |2017-04-19 |Minor modifications following internal review. a| Kim Holmen +
 Øystein Godøy
