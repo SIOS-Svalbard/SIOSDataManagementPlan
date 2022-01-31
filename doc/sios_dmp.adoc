@@ -51,14 +51,32 @@ toc::[]
 membership fees and in-kind contributions, additional activities are
 supported by external funding through joint proposals.
 
->|Partners |Alfred-Wegener-Institute (DE), British Antarctic Survey (UK),
-National Research Centre of Italy (IT), Finnish Meteorological Institute
-(FI), Institute of Geophysics - Polish Academy of Sciences (PL),
-Institut Polaire Francais (FR), Norwegian Meteorological Institute (NO),
-Nansen Environmental and Remote Sensing Center (NO), National Institute
-of Polar Research (JP), Norwegian Polar Institute (NO), Polar Research
-Institute of China (CN), Stockholm University (SE), The University
-Centre in Svalbard (NO), University of Helsinki (FI).
+>|Partners |Akvaplan-NIVA (NO), 
+Alfred-Wegener-Institute (DE), 
+Andøya Space (NO),
+Geological Survey of Norway (NO), 
+Institute for Atmosphere and Earth System Research of the University of Helsinki (FI)
+Institute of Geophysics, Polish Academy of Sciences (PL),
+Institute of Marine Research (NO),
+NILU - Norwegian Institute for Air Research (NO),
+NORCE Norwegian Research Centre AS (NO),
+NTNU - Norwegian University of Science and Technology (NO),
+Nansen Environmental and Remote Sensing Center (NO), 
+National Centre for Polar and Ocean Research (IN),
+National Institute of Polar Research (JP), 
+National Research Council of Italy (IT), 
+Norwegian Institute for Nature Research (NO),
+Norwegian Institute for Water Research (NO),
+Norwegian Meteorological Institute (NO),
+Norwegian Polar Institute (NO), 
+Norwegian Water Resources and Energy Directorate (NO),
+Swedish Polar Research Secretariat (SE),
+The University Centre in Svalbard (NO), 
+UiT The Arctic University of Norway (NO),
+University of Bergen (NO),
+University of Groningen (NO),
+University of Oslo (NO),
+University of Silesia, Poland (NO)
 |=======================================================================
 
 // TODO: Remember to update partner list
