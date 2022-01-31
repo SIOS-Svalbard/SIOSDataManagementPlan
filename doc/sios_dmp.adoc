@@ -120,117 +120,58 @@ regular sections or profiles).
 The total amount of data is yet not known as the Scientific Optimisation
 Advisory Group is identifying the core datasets.
 
+//The diversity of data handled by SIOS implies that a full overview is not possible in the current situation. However, SIOS is promoting utilisation of standards. One example is encoding of geophysical data using NetCDF following the Climate and Forecast convention. There are however issues with many of the standards and these issues have to be addressed by the SIOS Data Management System Working Group as the system evolves.
+
 The data is vital to the understanding of Earth System processes in and
 around Svalbard.
 
-=== Making data findable, including provisions for metadata [fair data]
+== FAIR data
 
-The SIOS Data Management System relies on documentation of datasets
-through Discovery metadata (technical guidelines under development).
-These metadata are maintained by the data centres contributing to SIOS.
-The central node of SIOS is harvesting these metadata on a regular basis
-and ingests them in a central catalogue which is used to support users
-through the SIOS Web Portal.
+=== Making data findable, including provisions for metadata
 
-SIOS promotes the implementation of Persistent Identifiers at each
-contributing data centre. Some have this in place, while others are in
-the process of establishing this. SIOS is not creating this centrally.
+The SIOS Data Management System (DSMS) relies on documentation of datasets through Discovery metadata (requirements are outlined in the SDMS technical manuals). These discovery metadata are maintained by the data centres contributing to SIOS. The central node of SIOS is harvesting these metadata on a regular basis and ingests them in a central catalogue which is used to support users through the SIOS Web Portal. The information model used by SIOS in the central catalogue is the https://htmlpreview.github.io/?https://github.com/metno/mmd/blob/master/doc/mmd-specification.html[MET Norway Metadata Format Specification] which is compliant with ISO19115 and GCMD DIF, and further extends these in certain areas.
 
-The diversity of data handled by SIOS implies that a full overview is
-not possible in the current situation. However, SIOS is promoting
-utilisation of standards. One example is encoding of geophysical data
-using NetCDF following the Climate and Forecast convention. There are
-however issues with many of the standards and these issues have to be
-addressed by the SIOS Data Management System Working Group as the system
-evolves.
+NOTE: SIOS promotes the implementation of Persistent Identifiers at each contributing data centre. Some have this in place, while others are in the process of establishing this. SIOS is not creating this centrally.
 
-The search model used is based on GCMD Science Keywords for parameter
-mapping. Not all data centres use these. Where possible, the central
-node will map between local vocabularies used by the data centres and
-the GCMD keywords until a more uniform annotation of data is possible.
-That will however take time as large legacy systems are integrated in
-SIOS.
+The search model used is based on GCMD Science Keywords for parameter mapping. Not all data centres use these. Where possible, the central node will map between local vocabularies used by the data centres and the GCMD keywords until a more uniform annotation of data is possible. That will however take time as large legacy systems are integrated in SIOS.
 
-Versioning of data is the responsibility of the contributing data
-centres and SIOS formulates requirements in the technical guidelines.
-Some data centres have this in place, while others are working on this.
-Full implementation, will as other issues take time and depend on the
-resources available.
+NOTE: Mapping of vocabularies are still work in progress.
 
-The central node can consume GCMD DIF and ISO19115 records (using GCMD
-keywords). Support for more formats is considered, but depends on
-resources.
+Versioning of data is the responsibility of the contributing data centres and SIOS formulates requirements in the technical guidelines. Some data centres have this in place, while others are working on this. Full implementation, will as other issues take time and depend on the resources available.
 
-=== Making data openly accessible [fair data]
+The central node of SIOS consumes discovery metadata exposed as GCMD DIF and ISO-19115 records (using GCMD keywords). Support for DCAT and schema.org is in progress. In addition SDMS can generated discovery metadata directly from NetCDF-CF files that are exposed on OPeNDAP, preferably using THREDDS catalogues. These data however, have to contain global attributes according to the http://wiki.esipfed.org/index.php/Attribute_Convention_for_Data_Discovery_1-3[Attribute Convention for Dataset Discovery (ACDD)]. The elements required by SDMS are indicated in https://adc.met.no/node/4. 
 
-All metadata will be available through a search interface integrated in
-the SIOS web portal. Some data may have access restrictions (as the data
-policy also opens for). These will be handled accordingly by the
-responsible data centre. In the long perspective Single Sign On is
-planned, but this is not feasible within the resources available
-initially.
+The catalogue is exposed through a human interface which is https://sios-svalbard.org/metsis/search[embedded in the SIOS website] and through a machine actionable interface which is available at https://sios.csw.met.no. 
 
-Data are made available by the responsible data centre. No data is
-handled centrally in the first version, only services towards data.
-Initially a wide range of access solutions and formats will be used. The
-SIOS Data Management Working Group is however developing technical
-guidelines addressing this issue as well. Implementation will have to be
-stepwise and at different speeds for the different data centres.
+WARNING: The machine interface is still under development and may lag behind the information found in the human interface.
 
-Methods and software for accessing data is under development. However,
-the intention is to use internationally accepted open standards (as
-mentioned above) which have a wide range of open software tools
-available. The central system for dataset discovery is developed under a
-GNU General Public License version 2 or higher. Some parts are published
-under GNU Lesser General Public License version 2.1 or higher.
+=== Making data openly accessible
 
-Metadata and data for the datasets are maintained by the responsible
-data centres, metadata supporting unified search is harvested and
-ingested in the central node. A dedicated GitHuB area has been set up
-for sharing software, but much of the software is already open source
-and in well maintained repositories. The addresses of these repositories
-will be collected and published within the infrastructure Intranet
-(including the GitHub repository).
+//All metadata will be available through a search interface integrated in the SIOS web portal. Some data may have access restrictions (as the data policy also opens for). These will be handled accordingly by the responsible data centre. In the long perspective Single Sign On is planned, but this is not feasible within the resources available initially.
 
-Datasets with restrictions are initially handled by the responsible data
-centre. Generally the metadata will be searchable and contain
-information on how to request access to the dataset.
+Data are made available by data centres contributing to the SDMS. No data is handled centrally in the first version, only services towards data. Initially a wide range of access solutions and formats will be supported, but for specific datasets like the https://sios-svalbard.org/CoreData[SIOS Core Data (SCD)], harmonised encoding and access mechanisms are requiredfootnote:[The SCD specifications are still under development.]. The SIOS Data Management Working Group is however developing technical guidelines addressing this issue as well. Implementation will have to be stepwise and at different speeds for the different data centres.
 
-=== Making data interoperable [fair data]
+Methods and software for accessing data is described in the SIOS Interoperability Guidelines. These relies on internationally accepted open standards which have a wide range of open software tools available. The central system for dataset discovery is developed under a GNU General Public License version 2 or higher. Some parts are published under GNU Lesser General Public License version 2.1 or higher.
 
-The current situation for the legacy datasets of SIOS is that there is
-no common level of interoperability at the data level. Some data centres
-support or have started to implement OPeNDAP and use metadata following
-the Climate and Forecast conventions.
+The https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SIOS_Data_Policy.pdf[SIOS Data Policy] promotes free and open data. As a general rule, discovery metadata are only provided where actual data are available online, although exceptions may occur.
 
-At the metadata level, interoperability is better as many of the data
-centres do support GCMD DIF with the appropriate controlled
-vocabularies.
+Datasets with restrictions are initially handled by the responsible data centre. Generally the metadata will be searchable and contain information on how to request access to the dataset.
 
-The interoperability aspect of SIOS will evolve and will require
-substantial support through dedicated resources.
+NOTE: Metadata and data for the datasets are maintained by the responsible data centres, metadata supporting unified search is harvested and ingested in the central node. 
 
-A system for semantic translation of annotated discovery metadata
-content is under development, but many of the controlled vocabularies
-are not available in machine readable form, neither have they been
-compared with other vocabularies (whether within or external to the
-discipline in question). This is work in progress. Relevant efforts of
-Research Data Alliance, ENVRIPlus and WMO are followed.
+=== Making data interoperable
 
-Initially GCMD Science keywords will be used, but given the open data
-space of SIOS, this has to be evaluated continuously. Currently mapping
-between GCMD and CF keywords is supported (but needs to be updated),
-mapping from e.g. the Canadian Polar Data Catalogue keywords are also
-supported.
+The current situation for the legacy datasets of SIOS is that there is no common level of interoperability at the data level. The primary focus of SIOS is to establish interoperability at the discovery metadata level. This is in good progress and the results is viewed in the Data Access Point embedded in the SIOS website. At the data level, interoperability is in progress for SCD which are prioritised. The technical requirements for both are outlined in the SDMS Interoperability guidelines. The reason why SCD are prioritised for this is that proper interoperability is required to ensure seamless integration of SCD data from various providers. This in support of Earth System Science.
 
-=== Increase data re-use (through clarifying licenses) [fair data]
+NOTE: SDMS is promoting the use of NetCDF following the Climate and Forecast Conventions and Darwin Core Archives for SCD. This ensures standardised structures and semantics.
 
-The data policy promotes free and open data sharing. However, while the
-data policy outlines the general rules of sharing data, a license
-describes the specific requirements for a dataset. Within SIOS each
-dataset will have a license. The SIOS recommendation is to use
-https://creativecommons.org/licenses/[Creative Commons] attribution for
-data.
+For the interoperability aspect of SIOS to further evolve will require substantial support through dedicated resources. A very good example of what can be achieved was the SIOS Core data Curation call of 2021 that focused on increased harmonisation of the way SCD are published.
+
+A system for semantic translation of annotated discovery metadata content is under development, but many of the controlled vocabularies are not available in machine readable form, neither have they been compared with other vocabularies (whether within or external to the discipline in question). This is work in progress. Relevant efforts of Research Data Alliance, ENVRIPlus and WMO are followed.
+
+=== Increase data re-use (through clarifying licenses)
+
+//The SIOS Data Policy promotes free and open data sharing. However, while the data policy outlines the general rules of sharing data, a license describes the specific requirements for a dataset. Within SIOS each dataset will have a license. The SIOS recommendation is to use https://creativecommons.org/licenses/[Creative Commons] attribution for data.
 
 According to the current version of the Data Policy:
 ____
@@ -239,98 +180,74 @@ un-due delay. Any delay, due or un-due, shall not be longer than one
 year. Discovery metadata shall be delivered immediately.
 ____
 
-Referring to the SIOS Data Policy, SIOS is promoting free and open
-access to data. Some data may have constraints and may be available to
-members only initially. If SIOS is to be terminated, data are still
-maintained by the contributing data centres and availability of data
-depends on the resources and priorities of those data centres.
+Referring to the SIOS Data Policy, SIOS is promoting free and open access to data. Some data may have constraints and may be available to members only initially. If SIOS is to be terminated, data are still maintained by the contributing data centres and availability of data depends on the resources and priorities of those data centres.
 
-Initially SIOS relies on data quality assurance processes implemented at
-each contributing data centre and by the Principal Investigators
-involved. Concerning the scientific quality of SIOS output, this depends
-on the data used and is monitored by the Science Optimisation and
-Advisory Group. The Science Optimisation Advisory Group will recommend
-actions or evaluations to be performed by the Data management working
-group.
-
-As long as SIOS operates the intention is to make observations available
-at any time, for simulations or analysed products, the norm will be 10
-years, but subject to the decision of the Science Optimisation Advisory
-Group.
-
-IMPORTANT: SIOS promotes the usage of the Creative Commons Attribution 4.0 license on all data.
+IMPORTANT: SIOS promotes the usage of the  https://creativecommons.org/licenses/[Creative Commons Attribution 4.0 license] on all data.
 
 == Allocation of resources
 
-In the current situation as the SIOS infrastructure is being developed,
-there is no overview of the total costs for making SIOS data FAIR. SIOS
-relies on existing infrastructures which in most cases already have FAIR
-elements implemented at the metadata level. At the dataset level very
-few data centres comply with FAIR principles. 
+In the current situation, as the SIOS infrastructure is being developed, there is no overview of the total costs for making SIOS data FAIR. SIOS relies on existing data centres which often have FAIR elements implemented at the discovery metadata level. At the dataset level very few data centres comply with the FAIR principles. 
 
-Activities within the SIOS Data Management System (SDMS) are coordinated through the SDMS Working Group which every year plans for the work to be undertaken and the resources needed in a work plan that is submitted to the SIOS Board of Directors and finally approved by the General Assembly.
+Activities within the SIOS Data Management System (SDMS) are coordinated through the https://sios-svalbard.org/SDMSWG[SDMS Working Group] which every year plans for the work to be undertaken and the resources needed in a work plan that is submitted to the SIOS Board of Directors and finally approved by the General Assembly. The SDMS WG has members from most of the partner data centres contributing and reports to the SIOS Board of Directors and eventually the General Assembly. The SDMS WG has approximately 20 membersfootnote:[The number of members fluctuates.], not all are active. 
 
-Below, the data centres involved in SDMS, and their respective members of the
-SIOS Data Management System Working Group are listed.
+The SDMS WG is chaired by Stein Tronstad and Marcin Wichorowski, the SIOS Data Manager acts as secretary for the group and the SIOS Data and Integration Officer acts as liaison with the scientific community, in addition to the relations already established internally by partners. 
+
+The partner data centres involved in development of SDMS, and their respective members of the SIOS Data Management System Working Group are listed below.
 
 [cols=">25,^10,~,~,~",]
 |=======================================================================
 |Name |Country |URL | Responsible | Comment
 
 |Arctic Data Archive System |JP |https://ads.nipr.ac.jp/ |Hironori
-Yabuki |Metadata interoperability
-interfaces are available. Regularly harvested.
+Yabuki |Discovery metadata interoperability interfaces are available. This data centre is regularly harvested.
 
 |Arctic Data Centre |NO |http://adc.met.no/ |Øystein Godøy
-|Metadata interoperability interfaces are available. Data are served according to the Interoperability Guidelines. This subsystem is connected to the WMO Information System.  Regularly harvested. 
-|AWI/PANGAEA |DE |http://pangaea.de/ |NA |Metadata interoperability interfaces are available. This subsystem is a member of ICSU World Data System. Regularly harvested.
+|Discovery metadata interoperability interfaces are available. Data are served according to the Interoperability Guidelines. This subsystem is connected to the WMO Information System and the data centre is regularly harvested. 
 
-|IGPAS |PL | |Jakub Przewalski |Metadata are harvested from datasets which are exposed according to the Interoperability Guidelines. 
+|AWI/PANGAEA |DE |http://pangaea.de/ |NA |Discovery metadata interoperability interfaces are available. This subsystem is a member of ICSU World Data System and is regularly harvested.
 
-|IOPAN |PL |https://geo1.iopan.pl |Marcin Wichorowski |Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
+|IGPAS |PL | |Jakub Przewalski |Discovery metadata are embedded in the datasets exposed, discover metadata interfaces are under implementation. Interfaces are currently undergoing testing. 
+
+|IOPAN |PL |https://geo1.iopan.pl |Marcin Wichorowski |Discovery metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines is in progress. The data centre is regularly harvested, but ingestion is still under testing.
 
 |Italian Arctic Data Center (IADC) |IT
 |https://metadata.iadc.cnr.i |Angelo Viola +
-Giulio Verazzo|Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
+Giulio Verazzo|Discovery metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. The data centre is regularly harvested, but ingestion is still under testing.
 
-|NILU |NO |http://ebas.nilu.no/ |Markus Fiebig |Metadata interoperability interfaces are available. Data are served according to the Interoperability Guidelines. This subsystem is connected to the WMO Information System. Regularly harvested.
+|NILU |NO |http://ebas.nilu.no/ |Markus Fiebig |Discovery metadata interoperability interfaces are available. Data are served according to the Interoperability Guidelines. This subsystem is connected to the WMO Information System and is regularly harvested.
 
 |Norwegian Marine Data Centre |NO |http://www.nmdc.no/ |Arnfinn Morvik
-|Metadata interfaces are available. This subsystem is national
-infrastructure in Norway. Regularly harvested.
+|Discovery metadata interfaces are available. This subsystem is a national
+e-infrastructure in Norway and is regularly harvested.
 
 |Norwegian Polar Institute |NO |http://data.npolar.no/ |Stein Tronstad
-|Metadata interoperability interfaces are available. Regularly harvested.
+|Discovery metadata interoperability interfaces are available. This data centre is regularly harvested.
 
-|Nansen Environmental and Remote Sensing Center |NO |http://metadata.nersc.no/ |Torill Hamre |Metadata interoperability interfaces are available. Regularly harvested.
+|Nansen Environmental and Remote Sensing Center |NO |http://metadata.nersc.no/ |Torill Hamre |Discovery metadata interoperability interfaces are available and data are served according to the interoperability guidelines. This data centre is regularly harvested.
 
-|University of Silesia |PL |http://ppdb.us.edu.pl/ |Łukasz Malarzweski |Metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines in in progress. Regularly harvested.
+|University of Silesia |PL |http://ppdb.us.edu.pl/ |Łukasz Małarzweski |Discovery metadata interoperability interfaces are available, integration of data sources according to the Interoperability Guidelines is in progress. This data centre is regularly harvested.
 |=======================================================================
 
-In the current situation SIOS has no overview of the costs of long term
-preservation of data. As mentioned, SIOS is built upon existing data
-streams and data centres. Thus these data are not only used for SIOS and
-would be preserved anyway.
+In the current situation SIOS has no overview of the costs of long term preservation of data. As mentioned, SIOS is built upon existing data streams and data centres. Thus these data are not only used for SIOS and would be preserved anyway.
 
-Concerning the value of data preservation, observations are priceless
-for understanding our environment.
-
-Development of the SDMS and handling of data within this is managed by the SDMS Working Group (WG) which reports to the SIOS Board of Directors and eventually the General Assembly. The SDMS WG has about 20 membersfootnote:[The number of members fluctuates.]
+Concerning the value of data preservation, observations are priceless for understanding our environment, and once lost, cannot be regenerated.
 
 == Data security
 
-Data security relies on the existing mechanisms of the contributing data
-centres. Currently SIOS has no recommendations in this context, but such
-recommendations are likely to be made later.
+Most of the data generated by the SIOS related infrastructure are open. SIOS is working to establish secure connections between data centres and data consumers to ensure that correct decisions can be made using data. However, data from third parties will also be made available, for these data there is limited room for SIOS to ensure integrity and security of data.
 
-The central node relies on secure HTTP traffic, but not all contributing
-data centres support this yet. This is expected to evolve during
-implementation.
+NOTE: SIOS promotes usage of secure communication at all end points connected to SDMS. The central node utilises secure HTTP, but not all contributing data centres support this yet. This is expected to evolve during the implementation.
+
+Initially SIOS relies on the data quality assurance processes implemented at each contributing data centre and by the Principal Investigators involved. Concerning the scientific quality of SIOS output, this depends on the data used and is monitored by the Science Optimisation and Advisory Group. The Science Optimisation Advisory Group will recommend actions or evaluations to be performed by the Data management working group. 
+
+In order to further improve the integrity of data served, the information model used for discovery metadata has room for checksums on datasets, however there is no universal approach to conveying this as it is today and for data served through web services it doesn't help. 
+
+As long as SIOS operates the intention is to make observations available at any time. For numerical simulations or analysed products, the norm is preservation for 10 years, but within SIOS this is subject to the decision of the Science Optimisation Advisory Group.
 
 == Ethical aspects
 
-Ethical aspects are handled in the SIOS Data Policy.
+Ethical aspects are handled according to the SIOS Data Policy. On a general basis SDMS is primarily handling non sensitive data, but SIOS follows the principle of "as open as possible, as closed as necessary".
 
 == Other
 
-Currently not applicable.
+None known yet.
