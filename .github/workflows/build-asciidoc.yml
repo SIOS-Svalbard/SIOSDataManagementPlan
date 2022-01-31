@@ -21,8 +21,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add -f doc/sdms_dmp.pdf
-        git add -f doc/sdms_dmp.html
+        git add -f doc/sios_dmp.pdf
+        git add -f doc/sios_dmp.html
         git commit -m "Automatic updated by GitHub Action"
 
     - name: push code to ${{ github.ref }}
