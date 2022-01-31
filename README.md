@@ -7,7 +7,7 @@ The purpose of this repository is to establish a collaborative work flow develop
 The document is automatically processed into a PDF and HTML variant. These versions are available through the links below. Please beware that the document provided through the links is the most recent working copy.
 
 - [PDF](https://github.com/SIOS-Svalbard/SIOSDataManagementPlan/blob/main/doc/sios_dmp.pdf)
-- [HTML](https://htmlpreview.github.io/?https://github.com/SIOS-Svalbard/SIOSDataManagementPlan/blob/main/doc/sios_dmp.html)
+- [HTML](https://htmlpreview.github.io/?https://github.com/SIOS-Svalbard/SIOSDataManagementPlan/raw/main/doc/sios_dmp.html)
 
 ## Setup
 Documents are transformed from the original OpenDocumentFormat into ASCIIDOC. Guidelines on how to format ASCIIDOC are available at
